@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="Dom1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+</head>
+<body>
+    
+        <div class="header">
+            <div class="logo">LOGO</div>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><P id="count">0</P></div>
+        </div>
+        <div class="container">
+            <div class="root ">
+
+
+                <div class="rootdiv fw1">
+                    <img class="rowimg produit" src="chos" alt="">
+                    <div class="pns">
+                        <button class="btnIcon"><i onclick="liked()" id="firstLike"  class="bi bi-heart-fill"></i></button>
+                        <div>
+                            <button onclick="uncreaseQuantity()" id="btnPlas">+</button>
+                            <span class="quantity">2</span>
+                            <button onclick="decreaseQuantity()" id="btnMinus">-</button>
+                        </div>
+                    </div>
+                    <h5 class="title fw-bold">chos1a-removebg-preview</h5>
+                    <h5  id="priceOne" class="price">$120</h4>
+                    <button class="addcart">add to cart</button>
+                    <i onclick="deletOne" id="deletOne"  class="bi bi-trash3-fill"></i>
+                </div>
+
+
+
+                <div class="rootdiv fw2" >
+                    <img class="produit rowimg" src="mode_femme/chos2a-removebg-preview.png" alt="">
+                    <div class="pns">
+                        <button class="btnIconTwo"><i onclick="likedTwo()" id="secondLike" class="bi bi-heart-fill"></i></button>
+                        <div>
+                            <button onclick="uncreaseQuantityt()" id="btnPlasTwo">+</button>
+                            <span class="quantityTwo">2</span>
+                            <button onclick="decreaseQuantityTwo()" id="btnMinusTwo">-</button>
+                        </div>
+                    </div>
+                    <h5 class="title fw-bold">chos2a-removebg-preview</h5>
+                    <h5 id="priceTwo" class=" price">$220</h4>
+                    <button type="button" class="addcart ">add to cart</button>
+                    <i onclick="delet" id="deletTwo"  class="bi bi-trash3-fill"></i>
+                </div>
+
+
+
+
+                <div class="rootdiv fw3">
+                    
+                    <img class="rowimg produit" src="mode_femme/chos2b-removebg-preview.png" alt="">
+                    <div class="pns">
+                        <i class="bi bi-heart-fill"></i>
+                        <div>
+                            <button class="btnPlas">+</button>
+                            <span class="number">2</span>
+                            <button id="btn-plus">-</button>
+                        </div>
+                    </div>
+                    <h5 class="title fw-bold">chos2b-removebg-preview</h5>
+                    <h5 class="prix price fw-bold">$100</h4>
+                    <button class="addcart ">add to cart</button>
+                    <i onclick="delet" id="deletTree"  class="bi bi-trash3-fill"></i>
+
+                </div>
+                <div class="rootdiv fw4">
+                    <img class="rowimg produit " src="mode_femme/SAC8B-removebg-preview.png" alt="">
+                    <div class="pns">
+                        <i class="bi bi-heart-fill"></i>
+                        <div>
+                            <button class="btnPlas">+</button>
+                            <span class="number">2</span>
+                            <button id="btn-plus">-</button>
+                        </div>
+                    </div>
+                    <p class="title fw-bold">SAC8B-removebg-preview</p>
+                    <h2 class="prix price fw-bold">$120</h2>
+                    <button onclick="" class="addcart " id="">add to cart</button>
+                    <i onclick="async()" id="deletFor"  class="bi bi-trash3-fill"></i>
+
+                </div>
+                
+            </div>
+            <div class="sidebar fw-bold ">
+                <div class="head ">My card</div>
+                <p class="cartItem  ">your card is empty</p>
+                <div class="foot d-flex">
+                    <h4 class="">Total</h4>
+                    <h2 class=" fw-bolder m-2"  id="total">$00.00</h2>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+
+
+
+        <script>
+            const deletOne = document.getElementById(`deletOne`);
+
+            deletOne.addEventListener(`click`,async(e) =>{
+                e.preventDefault()
+                   let fw1 = document.querySelector(`.fw1`)
+                   fw1.setAttribute(`class`,`deleteFw1`)
+});
+
+
+
+const deletTwo = document.getElementById(`deletTwo`);
+
+deletTwo.addEventListener(`click`,async(e) =>{
+    e.preventDefault()
+       let fw2 = document.querySelector(`.fw2`)
+       fw2.setAttribute(`class`,`deleteFw1`)
+});
+
+
+
+
+const deletTree = document.getElementById(`deletTree`);
+
+deletTree.addEventListener(`click`,async(e) =>{
+    e.preventDefault()
+       let fw3 = document.querySelector(`.fw3`)
+       fw3.setAttribute(`class`,`deleteFw1`)
+});
+
+
+const deletFor = document.getElementById(`deletFor`);
+
+deletFor.addEventListener(`click`,async(e) =>{
+    e.preventDefault()
+       let fw4 = document.querySelector(`.fw4`)
+       fw4.setAttribute(`class`,`deleteFw1`)
+});
+
+
+
+    //  augmenter et diminuer la quantite
+
+
+
+ const btnminus=document.getElementById(`btnMinus`)
+ btnMinus.addEventListener(`click`,function decreaseQuantity(){
+   document.querySelector(`.quantity`).innerText= parseInt(document.querySelector(`.quantity`).innerText)-1
+ });
+
+ const btnPlasTwo=document.getElementById(`btnPlasTwo`)
+ btnPlasTwo.addEventListener(`click`,function uncreaseQuantityt(){
+   document.querySelector(`.quantityTwo`).innerText= parseInt(document.querySelector(`.quantityTwo`).innerText)+1
+   addPriceTwo()
+ });
+ 
+
+ const btnminusTwo=document.getElementById(`btnMinusTwo`)
+ btnMinusTwo.addEventListener(`click`,function decreaseQuantityTwo(){
+   document.querySelector(`.quantityTwo`).innerText= parseInt(document.querySelector(`.quantityTwo`).innerText)-1
+   
+})
+const btnPlas=document.getElementById(`btnPlas`)
+ btnPlas.addEventListener(`click`,function uncreaseQuantity(){
+   document.querySelector(`.quantity`).innerText= parseInt(document.querySelector(`.quantity`).innerText)+1
+   addPrice()
+ })
+
+ function addPrice(){
+    let price=document.querySelector(`.price`).innerText
+    let qty= document.querySelector(`.quantity`).innerText
+    document.getElementById(`priceOne`).innerText= price*qty
+ }
+
+ function addPriceTwo(){
+    let price=document.querySelector(`.price`).innerText
+    let qty= document.querySelector(`.quantity`).innerText
+    document.getElementById(`priceTwo`).innerText= price*qty
+ }
+ function totalPrice(){
+     let priceOne=document.getElementById(`priceOne`).innerText
+     let priceTwo=document.getElementById(`priceTwo`).innerText
+     document.getElementById(`Total`).innerText=priceOne+priceTwo
+     return totalPrice
+ }
+
+     
+     
+     
+     
+const likeOne=document.querySelector(`.btnIcon`)
+btnIcon.addEventListener(`click`, liked)
+function liked(){
+    let likedon=document.getElementById(`firstLike`)
+    likeOne.style.color='#900D09'
+}
+
+
+const likeTwo=document.querySelector(`.btnIconTwo`)
+btnIconTwo.addEventListener(`click`, likedTwo)
+function likedTwo(){
+    let likedonTwo=document.getElementById(`secondLike`)
+    secondLike.style.color='#900D09'
+}
+
+
+</script>
+</body>
+</html>
